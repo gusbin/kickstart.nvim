@@ -33,4 +33,29 @@ return {
   },
   { 'bluz71/vim-nightfly-colors', name = 'nightfly', lazy = false, priority = 1000 },
   { 'bluz71/vim-moonfly-colors', name = 'moonfly', lazy = false, priority = 1000 },
+  {
+    'thehamsti/oscura.nvim',
+    lazy = false,
+    priority = 1000,
+    name = 'oscura',
+    config = function()
+      require('oscura').setup {
+        -- Optional configuration
+        italic_comments = true,
+        italic_keywords = false,
+        italic_functions = false,
+        italic_variables = false,
+        bold_functions = false,
+        bold_keywords = false,
+        bold_variables = false,
+        underline_variables = false,
+        strikethrough_deprecated = true,
+        undercurl_diagnostics = true,
+        bold_active_tab = true,
+        italic_signature_help = true,
+        bold_todo = true,
+        italic_todo = true,
+      }
+    end,
+  },
 }
