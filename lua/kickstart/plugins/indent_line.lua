@@ -4,6 +4,9 @@ return {
     -- Enable `lukas-reineke/indent-blankline.nvim`
     -- See `:help ibl`
     main = 'ibl',
-    opts = {},
+    opts = {
+      indent = { char = '┊' },
+    },
   },
 }
+-- let g:indentLine_char_list = ['', '¦', '┆', '']

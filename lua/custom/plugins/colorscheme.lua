@@ -7,12 +7,12 @@ return {
       require('black-metal').setup {
         -- optional configuration here
         favor_treesitter_hl = true,
-        dark_gutter = false,
-        alt_bg = true,
+        dark_gutter = true,
+        alt_bg = false,
         plain_float = true,
       }
-      require('black-metal').load()
-      vim.cmd.colorscheme 'dark-funeral'
+      -- require('black-metal').load()
+      -- vim.cmd.colorscheme 'dark-funeral'
     end,
   },
   { -- You can easily change to a different colorscheme.
@@ -56,6 +56,17 @@ return {
         bold_todo = true,
         italic_todo = true,
       }
+    end,
+  },
+  {
+    'webhooked/kanso.nvim',
+    lazy = false,
+    priority = 1000,
+    opts = {
+      theme = 'zen',
+    },
+    config = function()
+      vim.cmd 'colorscheme kanso-ink'
     end,
   },
 }
